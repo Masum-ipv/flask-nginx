@@ -11,6 +11,9 @@ COPY ./app /app
 RUN apt-get update
 RUN pip install -r requirements.txt
 RUN apt-get install nginx
+RUN apt-get install
+RUN apt-get install supervisord
+RUN apt-get install gevent
 
 
 # Nginx configuration
