@@ -1,7 +1,6 @@
 Flask==1.0.2   
 gunicorn==19.9.0  
-pip==18.1  
-nginx  
+pip==18.1    
 gunicorn==19.9.0
 supervisord==3.3.1
 gevent==1.2.2

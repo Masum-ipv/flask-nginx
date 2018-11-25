@@ -6,8 +6,12 @@ ENV APP_ENVIRONMENT production
 
 # Flask demo application
 COPY ./app /app
+
+# Package installation
 RUN apt-get update
 RUN pip install -r requirements.txt
+RUN apt-get install nginx
+
 
 # Nginx configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
