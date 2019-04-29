@@ -1,4 +1,4 @@
-Flask==1.0.2   
-gunicorn==19.9.0  
-pip==18.1    
-gunicorn==19.9.0
+Flask
+Flask-RESTful
+Flask-SQLAlchemy
+uwsgi
