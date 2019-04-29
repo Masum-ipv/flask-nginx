@@ -1,13 +1,17 @@
 #Import necessary packages
 from flask import Flask
-from flask_restful import Resource, reqparse, Api 
+from flask_restful import Resource, reqparse, Api
+import os
 
 #Instantiate a flask object 
 app = Flask(__name__)
 #Instantiate Api object
 api = Api(app)
+
 #Setting the location for the sqlite database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
+app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ['DATABASE_URL']
+
 #Adding the configurations for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True 
