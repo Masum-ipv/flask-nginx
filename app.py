@@ -9,8 +9,8 @@ app = Flask(__name__)
 api = Api(app)
 
 #Setting the location for the sqlite database
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
-app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ['DATABASE_URL']
 
 #Adding the configurations for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
